@@ -29,9 +29,11 @@
   },
   "devDependencies": {
     "babel-core": "^6.22.1",
-    "jslint": "^0.10.3"
+    "jslint": "^0.10.3",
+    "webpack": "^2.2.1"
   },
   "scripts": {
-    "try": "semistandard"
+    "try": "semistandard",
+    "webpack": "webpack js/ClientApp.js public/bundle.js"
   }
 }
