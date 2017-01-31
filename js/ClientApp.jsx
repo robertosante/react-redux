@@ -1,15 +1,15 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
+const Landing = require('./landing');
+const ReactRouter = require('react-router');
+const { Router, Route, hashHistory } = ReactRouter;
 
 // return function arrow ( to exclude the return syntaxis with the ( instead of using { )
+
 const App = () => (
-  <div className='app-container'>
-    <div className='home-info'>
-      <h1 className='title'>svideo</h1>
-      <input className='search' type='text' placeholder='Search' />
-      <button className='browse-all'>or Browse All</button>
-    </div>
-  </div>
+  <Router history={hashHistory} >
+    <Route path='/' component={Landing} />
+  </Router>
 );
 
 ReactDOM.render(<App />, document.getElementById('app'));
